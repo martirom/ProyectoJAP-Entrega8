@@ -41,7 +41,7 @@ let getJSONData = function (url) {
     });
 }
 
-let postJSONData = function(url){
+let postJSONData = function(url, data){
   let result = {};
   showSpinner();
   return fetch(url, {

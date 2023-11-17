@@ -117,7 +117,6 @@ app.post('/prodComment/:id', (req, res) => {
   
         // Convierte el contenido del archivo a un objeto JSON
         const comments = JSON.parse(fileData);
-  
         // Agrega el nuevo comentario al arreglo de comentarios
         const newComment = req.body.comment; // Asume que el comentario se proporciona en el cuerpo de la solicitud
         comments.push(newComment);
