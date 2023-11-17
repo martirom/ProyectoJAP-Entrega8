@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Ld0biYoAAAAAFYgoTR50-SkuN_amqByFfHtQeXf"></script>
+    <title>e-Mercado | Regístrate</title>
+</head>
+
+<body>
+    <div class="container-login">
+        <div class="split-screen">
+            <div class="left">
+                <section class="copy">
+                    <h1>Deja fluir tu imaginación.</h1>
+                    <p>En e-mercado está todo eso que estabas buscando!</p>
+                </section>
+            </div>
+
+            <div class="right">
+                <form>
+                    <section class="copy">
+                        <h2>Regístrate</h2>
+                        <div class="login-container">
+                            <p>Ya tienes una cuenta? <a href="#">
+                                    <strong>Ingresa Aquí</strong></a></p>
+                        </div>
+                    </section>
+                    <div class="input-container name">
+                        <label for="fname">Nombre completo</label>
+                        <input id="fname" name="fname" type="text" autocomplete="off">
+                    </div>
+
+
+                    <div class="input-container email">
+                        <label for="email">Correo electrónico</label>
+                        <input id="email" name="email" placeholder="EJ: ejemplo@gmail.com" type="email"
+                            autocomplete="off">
+                    </div>
+
+
+                    <div class="input-container password">
+                        <label for="fname">Contraseña</label>
+                        <input id="password" name="password" type="password"
+                            placeholder="Debe tener al menos 6 caracteres." autocomplete="off"> <i
+                            class="fa-solid fa-eye" id="show-password"></i>
+                    </div>
+
+                    <button class="signup-btn" type="submit" id="registerBtn">Registrarme</button>
+
+                    <section class="copy legal">
+                        <p><span class="small">
+                                Al continuar, accedes a aceptar nuestra
+                                <br><a href="#">Política de privacidad</a> &amp; <a href="#">Términos y
+                                    condiciones</a>.</span></p>
+                    </section>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

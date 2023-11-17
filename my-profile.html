@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Mi perfíl | eMercado - Todo lo que busques está aquí</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8308ddd231.js" crossorigin="anonymous"></script>
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <div class="dropdown">
+            <a class="nav-link dropdown-toggle nav-item" href="#" role="button" id="userDisplayed"
+              data-bs-toggle="dropdown" aria-expanded="false">
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a class="dropdown-item" href="cart.html">Carrito</a></li>
+              <li><a class="dropdown-item" href="my-profile.html">Perfil</a></li>
+              <li><button id="logoutBtn" class="button dropdown-item">Cerrar Sesión</button></li>
+              <li>
+                <label class="night"><input id="checkitem" type="checkbox" onclick="enableDarkMode()" />Modo
+                  nocturno</label>
+              </li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+
+    <div class="container">
+      <div class="d-flex justify-content-between my-3 align-items-center">
+        <h1 id="perfil-title">Perfil</h1>
+        <img id="userProfileImage" alt="Imagen de perfil">
+      </div>
+      <hr id="profile-hr">
+      <form id="profile-form">
+        <div class="form-group row">
+
+          <div class="col-6">
+            <label for="nombre" class="form-label text-secondary">Primer Nombre*:</label>
+            <input type="text" class="form-control" id="nombre" autocomplete="off" oninput="validateLetters(this)">
+            <span class="invalid-feedback"></span>
+          </div>
+          <div class="col-6">
+            <label for="segundo-nombre" class="form-label text-secondary">Segundo Nombre:</label>
+            <input type="text" class="form-control" id="segundo-nombre" autocomplete="off" oninput="validateLetters(this)">
+          </div>
+          <div class="col-6">
+            <label for="apellido" class="form-label text-secondary"> Primer Apellido*:</label>
+            <input type="text" class="form-control" id="apellido" autocomplete="off" oninput="validateLetters(this)">
+            <span class="invalid-feedback"></span>
+          </div>
+          <div class="col-6">
+            <label for="segundo-apellido" class="form-label text-secondary">Segundo Apellido:</label>
+            <input type="text" class="form-control" id="segundo-apellido" autocomplete="off" oninput="validateLetters(this)">
+          </div>
+          <div class="col-6">
+            <label for="email" class="form-label text-secondary">E-mail*:</label>
+            <input type="email" class="form-control" id="email" autocomplete="off">
+            <span class="invalid-feedback"></span>
+
+          </div>
+          <div class="col-6">
+            <label for="imagen" class="form-label text-secondary">Imagen de Perfil:</label>
+            <input type="file" class="form-control" id="imagen" accept="image/*">
+          </div>
+          <div class="col-6">
+            <label for="telefono" class="form-label text-secondary">Teléfono de Contacto:</label>
+            <input type="tel" class="form-control" id="telefono" maxlength="9"
+              onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"
+              placeholder="Ingrese su número de teléfono celular" autocomplete="off">
+          </div>
+        </div>
+        <hr>
+
+        <button class="btn btn-primary" id="guardar">Guardar Cambios</button>
+      </form>
+    </div>
+
+  </main>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a>
+      </p>
+    </div>
+  </footer>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/my-profile.js"></script>
+</body>
+
+</html>
